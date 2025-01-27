@@ -1,7 +1,7 @@
 //recuperando quantidade de cada tipo de ingresso declarado no html
-let qtdPista = document.getElementById("qtd-pista").textContent;
-let qtdSuperior = document.getElementById("qtd-superior").textContent;
-let qtdInferior = document.getElementById("qtd-inferior").textContent;
+let qtdPista = parseInt(document.getElementById("qtd-pista").textContent);
+let qtdSuperior = parseInt(document.getElementById("qtd-superior").textContent);
+let qtdInferior = parseInt(document.getElementById("qtd-inferior").textContent);
 
 function atualizarQuantidades(tipo, qtd){
     switch (tipo){
@@ -35,7 +35,7 @@ function atualizarQuantidades(tipo, qtd){
 function comprar(){
     //recuperando os valores inseridos no tipo de ingresso e na quantidade
     let tipo = document.getElementById("tipo-ingresso").value;
-    let qtd = document.getElementById("qtd").value;
+    let qtd = parseInt(document.getElementById("qtd").value);
     console.log(`tipo: ${tipo}, quantidade: ${qtd}`);
 
     //subtraindo as quantidades compradas das quantidades totais
